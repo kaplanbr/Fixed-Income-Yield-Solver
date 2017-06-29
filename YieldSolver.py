@@ -1,6 +1,6 @@
 """
-igridcoupon should be annual rate entered as percentage (eg. 5 percent is as 5)
-returning yield is as is (eg. 5 percent is 0.05)
+igridcoupon should be annual rate as percentage: (eg. 5 percent is as 5)
+returning yield is as is: (eg. 5 percent is 0.05)
 """
 
 import time
