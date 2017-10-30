@@ -75,13 +75,10 @@ class FixedIncomeYieldSolver(object):
 
     ##ALTERNATIVE METHOD, SLOWER CONVERGENCE, HAS UPPER BOUND         
     def calcYieldBinarySearch(dp,ubound=1000.,igridcoupon=4., ifreq=2., ikgs=82., idgs=182.,iremainingcoupons=2.,ifacevalue=100.):
-        import time
-        import traceback
-        import sys
         iLOGDIR = os.path.join(os.path.sep,os.getcwd(),"mylogs")
         FNCNAME = sys._getframe().f_code.co_name
         try:
-            lbound=-1*ifreq+0.0001
+            lbound = -1*ifreq+0.0001
             iyield = (lbound+ubound)/ 2.
             dp_guess = dirtyPrice(igridcoupon=igridcoupon, ifreq=ifreq, iyield=iyield, ikgs=ikgs, idgs=idgs,iremainingcoupons=iremainingcoupons, ifacevalue=ifacevalue)
             counter = 0
